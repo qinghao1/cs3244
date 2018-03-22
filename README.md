@@ -6,4 +6,5 @@
 
 ### User guide
 0. Make sure you have Tensorflow installed etc.
-1. Train model by running `python train_model.py`
+1. Run `jupyter notebook`
+    1. Train model with `train_model.ipynb`
