@@ -13,10 +13,10 @@ class Model:
 			model = keras.applications.densenet.DenseNet121(include_top=True, weights=None, input_shape=input_shape, classes=num_classes)
 
 		if model_type == "mobilenet":
-			model = keras.applications.mobilenet.MobileNet(input_shape=input_shape,classes=num_classes)
+			model = keras.applications.mobilenet.MobileNet(include_top=True, weights=None, input_shape=input_shape, classes=num_classes)
 
 		if model_type == "inception-resnet":
-			model = keras.applications.inception_resnet_v2.InceptionResNetV2(input_shape=input_shape, pooling=None, classes=num_classes)
+			model = keras.applications.inception_resnet_v2.InceptionResNetV2(include_top=True, weights=None, input_shape=input_shape, pooling=None, classes=num_classes)
 
 		model.compile(optimizer = keras.optimizers.Nadam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
