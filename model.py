@@ -18,6 +18,6 @@ class Model:
 		if model_type == "inception-resnet":
 			model = keras.applications.inception_resnet_v2.InceptionResNetV2(include_top=True, weights=None, input_shape=input_shape, pooling=None, classes=num_classes)
 
-		model.compile(optimizer = keras.optimizers.Nadam(), loss='categorical_crossentropy', metrics=['accuracy'])
+		model.compile(optimizer = Nadam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 		return model
