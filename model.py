@@ -1,19 +1,23 @@
-from keras.models import *
-from keras.layers import Input, merge, Conv2D, MaxPooling2D, Dropout
-from keras.optimizers import *
-from keras.callbacks import ModelCheckpoint, LearningRateScheduler
+import keras
+from keras.optimizers import Nadam
 
 class Model:
 
 	@staticmethod
-	def compile(self, height, width, channels):
+	def getCompiledModel(model_type, image_dim, num_classes):
 
-		inputs = Input(height, width, channels)
+		model = None
+		input_shape = image_dim + (3,)
 
-		# Layers here
+		if model_type == "densenet":
+			model = keras.applications.densenet.DenseNet121(include_top=True, weights=None, input_shape=input_shape, classes=num_classes)
 
-		model = Model(input=inputs, outputs=last_layer)
+		if model_type == "mobilenet":
+			model = keras.applications.mobilenet.MobileNet(input_shape=input_shape,classes=num_classes)
 
-		model.compile(optimizer = Nadam(), loss='categorical_crossentropy', metrics=['accuracy'])
+		if model_type == "inception-resnet":
+			model = keras.applications.inception_resnet_v2.InceptionResNetV2(input_shape=input_shape, pooling=None, classes=num_classes)
+
+		model.compile(optimizer = keras.optimizers.Nadam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 		return model
