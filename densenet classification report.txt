@@ -1,0 +1,14 @@
+                            precision    recall  f1-score   support
+
+ aeschynanthus_parvifolius       0.78      0.70      0.74        10
+      bougainvillea_glabra       0.80      0.80      0.80        10
+     costus_woodsonii_maas       1.00      0.82      0.90        11
+                 hedychium       1.00      0.89      0.94         9
+    hibiscus_rosa_sinensis       0.92      0.86      0.89        14
+            ixora_congesta       0.50      0.83      0.62         6
+           jasminum_sambac       0.80      0.89      0.84         9
+                   lycoris       0.80      1.00      0.89         4
+papilionanthe_miss_joaqium       1.00      0.88      0.93         8
+                  plumeria       0.80      0.80      0.80        10
+
+               avg / total       0.86      0.84      0.84        91
