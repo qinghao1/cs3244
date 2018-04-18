@@ -1,3 +1,4 @@
 *.h5
 *.npy
 .DS_Store
+!mobilenet_weights.328.h5
